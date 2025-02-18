@@ -1,7 +1,6 @@
 geopandas
 ee
-json
-os  # افزودن این خط
+os
 tempfile
 geemap.foliumap 
 BytesIO
