@@ -1,5 +1,5 @@
 geopandas
 ee
-geemap.foliumap 
+geemap
 BytesIO
 io
