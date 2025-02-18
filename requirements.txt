@@ -1,5 +1,4 @@
 geopandas
 ee
 geemap
-BytesIO
 io
