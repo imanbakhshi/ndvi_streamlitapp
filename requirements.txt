@@ -1,4 +1,5 @@
 geopandas
 ee
 geemap
+streamlit
 
