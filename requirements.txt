@@ -1,0 +1,8 @@
+geopandas
+ee
+json
+os  # افزودن این خط
+tempfile
+geemap.foliumap 
+BytesIO
+io
