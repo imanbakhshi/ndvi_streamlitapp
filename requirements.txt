@@ -2,5 +2,5 @@ geopandas
 ee
 geemap
 streamlit
-
+earthengine-api
 
