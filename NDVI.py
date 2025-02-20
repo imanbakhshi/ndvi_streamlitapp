@@ -9,7 +9,7 @@ import tempfile
 import geemap.foliumap as geemap
 from io import BytesIO
 from datetime import datetime
-
+from io import StringIO
 from PIL import Image
 
 import streamlit as st
