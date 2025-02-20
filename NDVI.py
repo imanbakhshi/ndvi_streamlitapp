@@ -94,7 +94,7 @@ if uploaded_file:
             .filterBounds(region) \
             .filterDate(start_date_ee, end_date_ee) \
             .sort("system:time_start", False) \
-            .first()
+            .median()
 
         if image is None:
             st.error("هیچ تصویری از Sentinel-2 برای این منطقه و بازه زمانی یافت نشد.")
