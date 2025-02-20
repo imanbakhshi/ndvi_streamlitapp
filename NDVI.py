@@ -1,3 +1,5 @@
+from statistics import median
+
 import streamlit as st
 import geopandas as gpd
 import ee
@@ -90,11 +92,19 @@ if uploaded_file:
         end_date_ee = ee.Date.fromYMD(end_date.year, end_date.month, end_date.day)
 
         # انتخاب آخرین تصویر Sentinel-2 بر اساس تاریخ‌های انتخاب‌شده
-        image = ee.ImageCollection("COPERNICUS/S2") \
+        image = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED") \
             .filterBounds(region) \
             .filterDate(start_date_ee, end_date_ee) \
-            .sort("system:time_start", False) \
-            .median()
+            # .sort("system:time_start", False) \
+            # .first()
+
+        image=image.median()
+
+        # image = ee.ImageCollection("COPERNICUS/S2") \
+        #     .filterBounds(region) \
+        #     .filterDate(start_date_ee, end_date_ee) \
+        #     .sort("system:time_start", False) \
+        #     .mosaic()
 
         if image is None:
             st.error("هیچ تصویری از Sentinel-2 برای این منطقه و بازه زمانی یافت نشد.")
